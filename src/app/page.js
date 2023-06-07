@@ -6,9 +6,6 @@ export default function Home() {
         <div className="font-mono mt-10">
             <div className="text-center">
                 <h2 className="text-3xl font-bold">📅 Ngitung Weton Jodoh</h2>
-                {/*<p className="mt-2">Instead of writing <span className="text-pink-500">git init</span>, <span className="text-pink-500">git add
-                        .</span>, and others one by one until <span className="text-pink-500">git push</span>... It's easier and faster to
-                    use one command below that you can use to easily initialize your Github repository with your project.</p>*/}
             </div>
 
             <div className="space-y-2">
