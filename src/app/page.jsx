@@ -17,9 +17,12 @@ export default function Home() {
   let [bobot, setBobot] = useState();
   let [res, setRes] = useState();
   let [secRes, setSecRes] = useState();
+
+  let [loading, setLoading] = useState(false);
   
   const handleSubmit = async(e) => {
     e.preventDefault();
+    setLoading(true);
     let { laki, perempuan } = e.target;
     laki = laki.value.split("-");
     perempuan = perempuan.value.split("-");
@@ -31,10 +34,11 @@ export default function Home() {
     setJava({ man: manWeton.tanggal_lahir.jawa, woman: womanWeton.tanggal_lahir.jawa });
     setPasaran({ man: manWeton.pasaran, woman: womanWeton.pasaran });
     setBobot({ man: manWeton.bobot_weton, woman: womanWeton.bobot_weton});
-    setRes({ man: manWeton.bobot_weton.bobot, woman: womanWeton.bobot_weton.bobot, total: manWeton.bobot_weton.bobot + womanWeton.bobot_weton.bobot  })
+    setRes({ man: manWeton.bobot_weton.bobot, woman: womanWeton.bobot_weton.bobot, total: manWeton.bobot_weton.bobot + womanWeton.bobot_weton.bobot  });
     
-    let hasil = Result.filter((x) => x.num.includes(manWeton.bobot_weton.bobot + womanWeton.bobot_weton.bobot))
-    setSecRes(hasil[0])
+    let hasil = Result.filter((x) => x.num.includes(manWeton.bobot_weton.bobot + womanWeton.bobot_weton.bobot));
+    setSecRes(hasil[0]);
+    setLoading(false);
   }
 
   return (
@@ -55,33 +59,35 @@ export default function Home() {
                       <input type="date" name="perempuan" className="input input-bordered rounded-lg block w-full" />
                   </label>
               </div>
-              <button className="btn btn-accent btn-block font-normal text-white" type="submit">Hitung</button>
+              <button className="btn btn-accent btn-block font-normal text-white" type="submit" disabled={loading}>{loading ? (<><span class="loading loading-spinner"></span> Ngitung...</>):  'Hitung'}</button>
             </form>
 
-            <div className="w-full pt-8 pb-4">
-              <h2 className="text-xl">👨 Laki Laki</h2>
-              <ul className="list-disc pl-8">
-                <li>Tanggalan Masehi: {m?.man}</li>
-                <li>Tanggalan Jawa: {java?.man}</li>
-                <li className="font-bold">Saptawara + Pancawara: {pasaran?.man} ({bobot?.man.saptawara} + {bobot?.man.pancawara} = {bobot?.man.bobot})</li>
-              </ul>
-            </div>
+            <div className={secRes ? '' : 'hidden'}>
+              <div className="w-full pt-8 pb-4">
+                <h2 className="text-xl">👨 Laki Laki</h2>
+                <ul className="list-disc pl-8">
+                  <li>Tanggalan Masehi: {m?.man}</li>
+                  <li>Tanggalan Jawa: {java?.man}</li>
+                  <li className="font-bold">Saptawara + Pancawara: {pasaran?.man} ({bobot?.man.saptawara} + {bobot?.man.pancawara} = {bobot?.man.bobot})</li>
+                </ul>
+              </div>
 
-            <div className="w-full py-4">
-              <h2 className="text-xl">👩 Perempuan</h2>
-              <ul className="list-disc pl-8">
-                <li>Tanggalan Masehi: {m?.woman}</li>
-                <li>Tanggalan Jawa: {java?.woman}</li>
-                <li className="font-bold">Saptawara + Pancawara: {pasaran?.woman} ({bobot?.woman.saptawara} + {bobot?.woman.pancawara} = {bobot?.woman.bobot})</li>
-              </ul>
-            </div>
+              <div className="w-full py-4">
+                <h2 className="text-xl">👩 Perempuan</h2>
+                <ul className="list-disc pl-8">
+                  <li>Tanggalan Masehi: {m?.woman}</li>
+                  <li>Tanggalan Jawa: {java?.woman}</li>
+                  <li className="font-bold">Saptawara + Pancawara: {pasaran?.woman} ({bobot?.woman.saptawara} + {bobot?.woman.pancawara} = {bobot?.woman.bobot})</li>
+                </ul>
+              </div>
 
-            <div className="w-full py-4">
-              <h2 className="text-xl">📅 Hasil</h2>
-              <div className="px-4">
-                <h3 className="text-xl font-bold my-4 text-white"><span className="p-1 bg-secondary rounded">{res?.man} + {res?.woman} = {res?.total} ({secRes?.title})</span></h3>
-                <h3 className="text-xl font-bold">{secRes?.title}</h3>
-                <p>{secRes?.description}</p>
+              <div className="w-full py-4">
+                <h2 className="text-xl">📅 Hasil</h2>
+                <div className="px-4">
+                  <h3 className="text-xl font-bold my-4 text-white"><span className="p-1 bg-secondary rounded">{res?.man} + {res?.woman} = {res?.total} ({secRes?.title})</span></h3>
+                  <h3 className="text-xl font-bold">{secRes?.title}</h3>
+                  <p>{secRes?.description}</p>
+                </div>
               </div>
             </div>
 
