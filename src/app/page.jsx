@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import Result from "@/common/Result";
+import Emoji from "@/components/Emoji";
 
 async function fetchWeton(tgl, bln, thn) {
   const d = await fetch(`https://api.dotmydotid.my.id/api/weton?tanggal=${tgl}&bulan=${bln}&tahun=${thn}`)
@@ -45,17 +46,17 @@ export default function Home() {
     <div className="p-4 md:p-8 max-w-xl m-auto">
         <div className="font-mono mt-10">
             <div className="text-center">
-                <h2 className="text-3xl font-bold">📅 Ngitung Weton Jodoh</h2>
+                <h2 className="text-3xl font-bold"><Emoji emoji={"📅"} label={'calendar'} /> Ngitung Weton Jodoh</h2>
             </div>
 
             <form className="space-y-2" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 pt-8 gap-4">
                   <label className="block">
-                      <span className="after:content-['_*'] after:text-red-500">👨 Tanggal Lahir si Laki-Laki</span>
+                      <span className="after:content-['_*'] after:text-red-500"><Emoji emoji={"👨"} label={"man"} /> Tanggal Lahir si Laki-Laki</span>
                       <input type="date" name="laki" className="input input-bordered rounded-lg block w-full" />
                   </label>
                   <label className="block">
-                      <span className="after:content-['_*'] after:text-red-500">👩 Tanggal Lahir si Perempuan</span>
+                      <span className="after:content-['_*'] after:text-red-500"><Emoji emoji={"👩"} label={"woman"} /> Tanggal Lahir si Perempuan</span>
                       <input type="date" name="perempuan" className="input input-bordered rounded-lg block w-full" />
                   </label>
               </div>
@@ -64,7 +65,7 @@ export default function Home() {
 
             <div className={secRes ? '' : 'hidden'}>
               <div className="w-full pt-8 pb-4">
-                <h2 className="text-xl">👨 Laki Laki</h2>
+                <h2 className="text-xl"><Emoji emoji={"👨"} label={"man"} /> Laki Laki</h2>
                 <ul className="list-disc pl-8">
                   <li>Tanggalan Masehi: {m?.man}</li>
                   <li>Tanggalan Jawa: {java?.man}</li>
@@ -73,7 +74,7 @@ export default function Home() {
               </div>
 
               <div className="w-full py-4">
-                <h2 className="text-xl">👩 Perempuan</h2>
+                <h2 className="text-xl"><Emoji emoji={"👩"} label={"woman"} /> Perempuan</h2>
                 <ul className="list-disc pl-8">
                   <li>Tanggalan Masehi: {m?.woman}</li>
                   <li>Tanggalan Jawa: {java?.woman}</li>
@@ -82,7 +83,7 @@ export default function Home() {
               </div>
 
               <div className="w-full py-4">
-                <h2 className="text-xl">📅 Hasil</h2>
+                <h2 className="text-xl"><Emoji emoji={"📅"} label={'calendar'} /> Hasil</h2>
                 <div className="px-4">
                   <h3 className="text-xl font-bold my-4 text-white"><span className="p-1 bg-secondary rounded">{res?.man} + {res?.woman} = {res?.total} ({secRes?.title})</span></h3>
                   <h3 className="text-xl font-bold">{secRes?.title}</h3>
@@ -93,7 +94,7 @@ export default function Home() {
 
             <div className="text-center pt-8 text-sm">
                 <p>
-                    <Link href="https://github.com/JastinXyz/wetonjodoh" target="__blank" className="text-indigo-500 underline">🐈 Github</Link>
+                    <Link href="https://github.com/JastinXyz/wetonjodoh" target="__blank" className="text-indigo-500 underline"><Emoji emoji={"🐈"} label={"cat"} /> Source Code</Link>
                     ·
                     <Link href="https://jstnlt.my.id" target="__blank" className="text-indigo-500 underline">jstnlt.my.id</Link>
                 </p>
