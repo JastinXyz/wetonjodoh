@@ -53,11 +53,11 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-2 pt-8 gap-4">
                   <label className="block">
                       <span className="after:content-['_*'] after:text-red-500"><Emoji emoji={"👨"} label={"man"} /> Tanggal Lahir si Laki-Laki</span>
-                      <input type="date" name="laki" className="input input-bordered rounded-lg block w-full" />
+                      <input type="date" name="laki" className="input input-bordered rounded-lg block w-full" required/>
                   </label>
                   <label className="block">
                       <span className="after:content-['_*'] after:text-red-500"><Emoji emoji={"👩"} label={"woman"} /> Tanggal Lahir si Perempuan</span>
-                      <input type="date" name="perempuan" className="input input-bordered rounded-lg block w-full" />
+                      <input type="date" name="perempuan" className="input input-bordered rounded-lg block w-full" required/>
                   </label>
               </div>
               <button className="btn btn-accent btn-block font-normal text-white" type="submit" disabled={loading}>{loading ? (<><span class="loading loading-spinner"></span> Ngitung...</>):  'Hitung'}</button>
