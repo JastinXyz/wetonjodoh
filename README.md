@@ -37,6 +37,7 @@ Ketika sudah mendaptkan nilai dari kedua pasangan, maka tinggal dijumlahkan. Dan
 Di aplikasi ini kamu hanya butuh menginputkan tanggal lahir si laki laki dan perempuan... Otomatis akan mendapatkan rinciannya beserta penjelasan.
 
 ## Demo
+
 <center>
     <a href="https://wetonjodoh.vercel.app"><img src="https://i.ibb.co/86Pw36Q/screencapture-wetonjodoh-vercel-app-2023-08-21-15-08-56.png" alt="demo at wetonjodoh.vercel.app" border="0"></a>
     <br/>
