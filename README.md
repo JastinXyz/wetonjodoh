@@ -42,4 +42,7 @@ Di aplikasi ini kamu hanya butuh menginputkan tanggal lahir si laki laki dan per
     <a href="https://wetonjodoh.vercel.app"><img src="https://i.ibb.co/86Pw36Q/screencapture-wetonjodoh-vercel-app-2023-08-21-15-08-56.png" alt="demo at wetonjodoh.vercel.app" border="0"></a>
     <br/>
     <a href="https://wetonjodoh.vercel.app"><i>https://wetonjodoh.vercel.app</i></a>
+    <br/>
+    <br/>
+    <a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FJastinXyz%2Fwetonjodoh"><img src="https://vercel.com/button" alt="Deploy with Vercel"/></a>
 </div>
