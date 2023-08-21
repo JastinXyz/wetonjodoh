@@ -1,34 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ngitung Weton Jodoh
 
-## Getting Started
+Weton Jodoh adalah konsep dalam budaya Jawa yang mengkombinasikan dua unsur, yaitu neptu hari dan pasaran dari kedua pasangan, untuk menentukan kecocokan dua orang dalam pernikahan atau hubungan. Neptu sendiri adalah nilai tertentu dari suatu hari dan pasaran.
 
-First, run the development server:
+Cara mengitungnya cukup simpel, hanya perlu memperhitungkan hari lahir kedua pasangan sesuai weton, Untuk mengetahui neptu hari dan pasaran bisa di lihat tabel dibawah:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+| | Legi (5) | Pahing (9) | Pon (7) | Wage (4) | Kliwon (8) |
+| :-: | :-: | :-: | :-: | :-: | :-: |
+| **Senin (4)** | 9 | 13 | 11 | 8 | 12 |
+| **Selasa (3)** | 8 | 12 | 10 | 7 | 11 |
+| **Rabu (7)** | 12 | 16 | 14 | 11 | 15 |
+| **Kamis (8)** | 13 | 17 | 15 | 12 | 16 |
+| **Jumat (6)** | 11 | 15 | 13 | 10 | 14 |
+| **Sebtu (9)** | 14 | 18 | 16 | 13 | 17 |
+| **Minggu (5)** | 10 | 14 | 12 | 9 | 13 |
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> Misal hari **Jumat Pahing** maka nilainya 15.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Ketika sudah mendaptkan nilai dari kedua pasangan, maka tinggal dijumlahkan. Dan nantinya ketemu hasil yang bisa di cocokan dengan tabel dibawah:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+| Nama | Penjelasan | Jika Hasil |
+| :-: | :-: | :-: |
+| Pegat | Yen tibo PEGAT bakal nemu masalah, mboh kui songko segi ekonomi, kekuasaan, selingkuh sing akhir"e iso pegatan. | 1, 9, 17, 25, 33 |
+| Ratu | Yen tibo RATU iki jodoh banget. Di ajeni karo tonggo teparo lan wongliyo. Akeh wong iri karo keharmonisane. | 2, 10, 18, 26, 34 |
+| Jodoh | Yen tibo jodoh cocok siji karo sijine. Iso podo" nrimo keluwehan lan kekurangan. Omah" lancar teko tuwo. | 3, 11, 19, 27, 35 | 
+| Topo | Yen tibo TOPO iki awal"e susah nanging tembe mburi penak. Awal"e kerep kenek masalah emboh kui songko segi ekonomi utowo liyone. Nanging yen wis nduwe anak lan wis suwe anggone omah" bakal mulyo uripe. | 4, 12, 20, 28, 36 |
+| Tinari | Yen tibo TINARI iki bakal nemu seneng. Penak anggone golek rejeki lan ora sampek urip kekurangan. Penak\'e tembung kerep nemu bejo anggone omah" | 5, 13, 21, 29 |
+| Padu | Yen tibo PADU iki bakal sering tukaran. Nanging sejana saben ndino tukaran tapi ora sampek pegatan. Mulo anggone omah" meh saben ndino tukaran emboh kui masalah opo ae. | 6, 14, 22, 30 |
+| Sujanan | Yen tibo SUJANAN iki kerep tukaran lan akeh" masalah selingkuh. Emboh kui sing lanang po sing wadon opo malah loro"ne podo la nduwe selingkuhan. | 7, 15, 23, 31 |
+| Pesthi | Yen tibo PESTHI iki omah"e bakal rukun, tentrem, adem ayem sampek tuwo. Senajan eneng masalah opo ae ora bakal ngrusak keharmonisane. | 8, 16, 24, 32 |
 
-## Learn More
+## Contoh
+- \> Pasaran laki-laki: **Jumat Pahing (15)**
+- \> Pasaran perempuan: **Rabu Wage (11)**
+- \> **15 + 11 = 26 (Ratu)** 
 
-To learn more about Next.js, take a look at the following resources:
+Di aplikasi ini kamu hanya butuh menginputkan tanggal lahir si laki laki dan perempuan... Otomatis akan mendapatkan rinciannya beserta penjelasan.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Demo
+<center>
+    <a href="https://wetonjodoh.vercel.app"><img src="https://i.ibb.co/86Pw36Q/screencapture-wetonjodoh-vercel-app-2023-08-21-15-08-56.png" alt="demo at wetonjodoh.vercel.app" border="0"></a>
+    <br/>
+    <a href="https://wetonjodoh.vercel.app"><i>https://wetonjodoh.vercel.app</i></a>
+</center>
