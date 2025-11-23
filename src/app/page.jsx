@@ -6,7 +6,7 @@ import Result from "@/common/Result";
 import Emoji from "@/components/Emoji";
 
 async function fetchWeton(tgl, bln, thn) {
-  const d = await fetch(`https://api.dotmydotid.my.id/api/weton?tanggal=${tgl}&bulan=${bln}&tahun=${thn}`)
+  const d = await fetch(`https://apitool.pgl.my.id/api/weton?tanggal=${tgl}&bulan=${bln}&tahun=${thn}`)
   const res = await d.json();
   return res;
 }
